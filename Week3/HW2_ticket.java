@@ -26,7 +26,7 @@ class ticketMachine implements Runnable {
     public void run() {
         while (takeTicket(this)) {
         }
-        System.out.println(t.getName() + " 總共賣出" + tTicket + "張票");
+        System.out.println(t.getName() + " totally sold " + tTicket + " tickets");
     }
 
     private synchronized static boolean takeTicket(ticketMachine machine) {
