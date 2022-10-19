@@ -75,7 +75,7 @@ class MyJFrame extends JFrame implements ActionListener {
         btnMinus.addActionListener(this);
         contentPane.add(btnMinus);
         
-        JButton btnMultiply = new JButton("×");
+        JButton btnMultiply = new JButton("*");
         btnMultiply.addActionListener(this);
         contentPane.add(btnMultiply);
         
@@ -83,7 +83,7 @@ class MyJFrame extends JFrame implements ActionListener {
         btnEqual.addActionListener(this);
         contentPane.add(btnEqual);
         
-        JButton btnSubstract = new JButton("÷");
+        JButton btnSubstract = new JButton("/");
         btnSubstract.addActionListener(this);
         contentPane.add(btnSubstract);
         
