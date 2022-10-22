@@ -69,12 +69,12 @@ class MyJFrame extends JFrame implements ActionListener {
                     btn2.setEnabled(false);
                     JOptionPane.showMessageDialog(null, "沒有圖了", "圖片", JOptionPane.WARNING_MESSAGE);
                 }
-                if (imgNumber == 2){
+                else if (imgNumber == 2){
                     lab1.setText("圖片3");
                     imgNumber++;
                     lab2.setIcon(img3);
                 }
-                if (imgNumber == 1) {
+                else {
                     lab1.setText("圖片2");
                     imgNumber++;
                     lab2.setIcon(img2);
