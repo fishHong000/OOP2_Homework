@@ -23,29 +23,32 @@ class MyJFrame extends JFrame {
         Panel_0 = new JPanel(new GridLayout(2, 1));
         setContentPane(Panel_0);
         
-        JLabel labelCity = new JLabel("找各地名山：");
+        // lblCity
+        JLabel lblCity = new JLabel("找各地名山：");
         
         JPanel Panel_1 = new JPanel(new FlowLayout());
-        Panel_1.add(labelCity);
+        Panel_1.add(lblCity);
         
+        // txtShow
         JTextArea txtShow = new JTextArea("可選取地名...");
         add(txtShow);
         JScrollPane Panel_2 = new JScrollPane(txtShow, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         
-        JList<String> listCity = new JList<>(CITY);
-        listCity.setVisibleRowCount(4);
-        listCity.addListSelectionListener(new ListSelectionListener() {
+        // lst
+        JList<String> lst = new JList<>(CITY);
+        lst.setVisibleRowCount(4);
+        lst.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 String lbShow = "";
-                for (int i : listCity.getSelectedIndices()) {
+                for (int i : lst.getSelectedIndices()) {
                     lbShow += CITY[i] + "的名山： " + MOUNT[i];
                     txtShow.setText(lbShow);
                 }
             }
         });
-        JScrollPane list_ScrollPanel = new JScrollPane(listCity, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+        JScrollPane list_ScrollPanel = new JScrollPane(lst, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         Panel_1.add(list_ScrollPanel);
         
