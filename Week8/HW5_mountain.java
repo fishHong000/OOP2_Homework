@@ -23,19 +23,15 @@ class MyJFrame extends JFrame {
         Panel_0 = new JPanel(new GridLayout(2, 1));
         setContentPane(Panel_0);
         
-        // lblCity
         JLabel lblCity = new JLabel("找各地名山：");
-        
         JPanel Panel_1 = new JPanel(new FlowLayout());
         Panel_1.add(lblCity);
         
-        // txtShow
         JTextArea txtShow = new JTextArea("可選取地名...");
         add(txtShow);
         JScrollPane Panel_2 = new JScrollPane(txtShow, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         
-        // lst
         JList<String> lst = new JList<>(CITY);
         lst.setVisibleRowCount(4);
         lst.addListSelectionListener(new ListSelectionListener() {
@@ -52,10 +48,9 @@ class MyJFrame extends JFrame {
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         Panel_1.add(list_ScrollPanel);
         
+        setContentPane(Panel_0);
         Panel_0.add(Panel_1);
         Panel_0.add(Panel_2);
-        
-        setContentPane(Panel_0);
         pack();
         setVisible(true);
     }
