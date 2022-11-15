@@ -12,7 +12,7 @@ class MyJFrame extends JFrame {
     
     private JPanel Panel_0;
     private static final String[] CITY = {"台北", "宜蘭", "桃園", "台中", "南投", "彰化", "高雄"};
-    private static final String[] MOUNT = { "陽明山", "阿玉山", "拉拉山", "鳶嘴山", "合歡山", "八卦山", "壽山" };
+    private static final String[] MOUNT = { "陽明山", "阿玉山", "拉拉山", "梨山", "合歡山", "八卦山", "壽山" };
     
     public MyJFrame() {
         
@@ -43,7 +43,7 @@ class MyJFrame extends JFrame {
             public void valueChanged(ListSelectionEvent e) {
                 String lbShow = "";
                 for (int i : lst.getSelectedIndices()) {
-                    lbShow += CITY[i] + "的名山： " + MOUNT[i];
+                    lbShow += CITY[i] + " 名山：  " + MOUNT[i];
                     txtShow.setText(lbShow);
                 }
             }
